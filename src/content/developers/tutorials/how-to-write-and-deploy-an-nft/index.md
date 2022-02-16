@@ -157,7 +157,7 @@ Open up the my-nft project in your favorite editor (we like [VSCode](https://cod
    ```solidity
    //Contract based on [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
    // SPDX-License-Identifier: MIT
-   pragma solidity ^0.8.0;
+   pragma solidity ^0.8.4;
 
    import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
    import "@openzeppelin/contracts/utils/Counters.sol";
@@ -261,13 +261,13 @@ Update your hardhat.config.js to look like this:
     require("@nomiclabs/hardhat-ethers");
     const { API_URL, PRIVATE_KEY } = process.env;
     module.exports = {
-       solidity: "0.8.0",
+       solidity: "0.8.4",
        defaultNetwork: "ropsten",
        networks: {
           hardhat: {},
           ropsten: {
-             url: API_URL,
-             accounts: [`0x${PRIVATE_KEY}`]
+             url: 'https://eth-ropsten.alchemyapi.io/v2/PLACE API URL HERE',
+             accounts: [`PLACE PRIVATE KEY HERE`]
           }
        },
     }
